@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8"/>
+	<package name="test" extends="struts-default" >
+			<action name="search_action" class="cn.action.SearchAction" method="search">
+				<result name="resource"  type="redirect">/resource.jsp</result>
+			</action>
+			
+			<action name="download_action" class="cn.action.DownloadAction" method="download">
+				<result name="download" type="stream">
+						<!-- 运行下载的文件的类型:指定为所有的二进制文件类型 -->
+			   <param name="contentType">application/octet-stream</param>
+			   
+			   <!-- 对应的是Action中属性： 返回流的属性【其实就是getAttrInputStream()】 -->
+			   <param name="inputName">AttrInputStream</param>
+			   
+			   <!-- 下载头，包括：浏览器显示的文件名 -->
+			   <param name="contentDisposition">attachment;filename=${DownFileName}</param>
+   			   <param name="bufferSize">1024</param>
+				</result>
+			</action>
+			<action name="join_action" class="cn.action.JoinAction" method="join"></action>
+			
+			<action name="page_action" class="cn.action.pageAction"></action>
+			
+			<action name="resource_action" class="cn.action.ResourceAction">
+				<result name="success" type="redirectAction">search_action</result>
+			</action>
+	</package>
+	
+	<package name="myPackage" extends="struts-default">
+		<!-- 定义action -->
+		<action name="*StudentAction" class="cn.action.StudentAction" method="{1}Student">
+			<!-- 定义处理成功后的映射页面 -->
+			<result name="logOn">index.jsp</result>
+			<result name="add">index.jsp</result>
+		</action>
+		
+		<action name="addInformation" class="cn.action.InformationAction" method="addInformation">
+			<result name="add">baseinformation.jsp</result>
+		</action>
+		
+		<action name="planStudySetAction" class= "cn.action.PlanAction" method="PlanSet">
+			<result name = "false">StudyPlan.jsp</result>
+			<result name = "victory">showPlan.jsp</result>
+		</action>
+		
+		<action name="finishScheduleAction" class="cn.action.ScheduleAction" method="scheduleFinish">
+			<result name="victory">showPlan.jsp</result>
+		</action>
+		<action name="FileUpload2" class="it.cast.action.FileUpload">
+			<result>filedemo.jsp</result>
+		</action>
+	</package>
+</struts>

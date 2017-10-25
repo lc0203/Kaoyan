@@ -1,0 +1,129 @@
+/*********css����*********/
+
+#header{ /*��ɫ��*/
+width: 100%;
+height: 40px;
+background-color: #434343;
+}
+#header .header1{ /*��Զ�λ�ĸ�Ԫ��*/
+width: 1000px;
+height: 40px;
+margin: 0 auto;
+position: relative;
+}
+#header .header1 .header1logo{ /*���logo*/
+width: 160px;
+height: 100px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+#header .header1 #header1jianshen{ /*�Ҳ�logo����Ч*/
+float: right;
+width: 115px;
+height: 40px;
+margin-right: 15px;
+}
+#headerOneReg{ /*ע��*/
+float: right;
+width: 65px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+font-size: 11px;
+color: #fff;
+}
+.headerOneLogin{ /*��¼*/
+position: absolute;
+width: 65px;
+height: 45px;
+right: 195px;
+top: 0px;
+background-color: #917347;
+line-height: 40px;
+text-align: center;
+font-size: 11px;
+color: #fff;
+}
+
+#headerer{ /*100%����ͼƬ*/
+width: 100%;
+height: 72px;
+background-image:url(../picture/channelNav_go.jpg);
+}
+#headerer .headerTwo{ /*���п��*/
+width: 1000px;
+height: 70px;
+margin: 0 auto;
+}
+#headerer .headerTwo ul{ /*���򵼺���תul*/
+width: 750px;
+height: 40px;
+float: left;
+}
+#headerer .headerTwo li{ /*���򵼺���תli*/
+list-style:none;
+margin-top: 20px;
+width: 55px;
+height: 30px;
+float: left;
+margin-left: 10px;
+margin-right: 10px;
+}
+#headerer .headerTwo li a{ /*���򵼺���תa��ǩ��ת���ɿ�״��ǩ
+*/
+width: 55px;
+height: 30px;
+display: block;
+line-height: 30px;
+text-align: center;
+color: #000;
+}
+#headerer .headerTwo li a:hover{ /*����ı�����ɫ*/
+color: #8d60ad;
+}
+#headerer .headerTwo ul .headerTwoShouye{ /*���򵼺���ת��һ
+��li*/
+margin-left: 250px;
+background-color: #8d60ad;
+border-radius:5px;
+}
+#headerer .headerTwo ul .headerTwoShouye a{ /*���򵼺���ת��
+һ��li��a��ǩ*/
+color: #fff;
+}
+#headerer .headerTwo .headerTwoSosuoA{ /*�������Ŵ�div*/
+width: 30px;
+height: 30px;
+background-image:url(../picture/icon.png);
+background-repeat:no-repeat;
+ background-position:5px 5px;
+ float: right;
+
+}
+#headerer .headerTwo .headerTwoSosuoB{ /*����������Ŵ�
+div*/
+float: right;
+width: 160px;
+height: 30px;
+
+background-color: #fff;
+border-radius:5px;
+margin-top: 32px;
+box-shadow:1px 1px 1px #9A9A9A;
+}
+#headerer .headerTwo .headerTwoSosuoB input{ /*�������ı���
+*/
+border: 0;
+width: 125px;
+height: 28px;
+}
+#headerer #searchbutton{
+	 width:30px;
+	 height:30px; 
+	background-image:url(../picture/icon.png);
+	 background-repeat:no-repeat; 
+	 background-position:5px 5px; 
+	 float:right;"
+	
+}

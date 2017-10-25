@@ -1,0 +1,76 @@
+#body_study{
+    margin:0 auto;
+    margin-top:15px;
+    width: 100%;
+    height: auto;
+    background:#f2f6ff;
+}
+#body_study1{
+    width:100%;
+    height:auto;
+}
+
+#body_study1 img{
+    width: 100%;
+    height:auto;
+    position:absolute;
+}
+#body_study1_personal_info{
+    width:70%;
+    height:25%;
+    margin:0 auto;
+    position: relative;
+}
+#body_study1_personal_info .icon{
+     float:left;
+     position:relative;
+     top:20px;
+     width:100px;
+     height:100px;
+     margin-left:5px;
+     border:1px solid;
+     border-radius:50px;
+ }
+
+#body_study1_personal_info .icon img{
+    width:100%;
+    height:100%;
+    border:1px solid;
+    border-radius:50%;
+}
+
+#person_information{
+    margin-top: 18px;
+    float:left;
+    margin-left:20px;
+    font-size:28px;
+}
+#body_study2{
+    width:70%;
+    height:auto;
+    margin:0 auto;
+}
+#body_study2_head{
+    width:70%;
+    height:10%;
+    float:left;
+    border-color: #00FFCC;
+}
+#body_study2_head ul{
+    width:100%;
+}
+#body_study2_head  li{
+    margin-left: 20px;
+    float:left;
+    height:30px;
+    list-style: none;
+    font-size: 20px;
+    text-align:center;
+    padding-top:10px;
+}
+#body_study2 #body_study2_main{
+    margin-top:10px;
+    width:100%;
+    height:500px;
+    border:none;
+}

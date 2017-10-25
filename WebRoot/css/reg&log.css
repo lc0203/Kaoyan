@@ -1,0 +1,47 @@
+#logOn{
+margin-left:170px;
+padding-top:30px;
+display:block;
+padding-bottom:20px;
+display:none;
+}
+#regOn{
+margin-left:170px;
+padding-top:30px;
+display:none;
+padding-bottom:20px;
+}
+
+
+#logged{
+width:200px;
+height:40px;
+float:right;
+}
+#logged .icon img{
+width:30px;
+height:30px;
+border:1px solid;
+border-radius:15px;
+}
+#logged .hello{
+float:left;
+margin-left:0px;
+}
+#logged .hello span{
+position:relative;
+top:12px;
+font-size:15px;
+text-align:left;
+color:#33CCFF;
+}
+#logged .icon{
+float:right;
+position:relative;
+top:5px;
+width:30px;
+height:30px;
+margin-right:5px;
+border:1px solid;
+border-radius:15px;
+}

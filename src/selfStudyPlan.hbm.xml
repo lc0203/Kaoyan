@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibenate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<class name="Plan.SelfStudyPlan" table="study_plan">
+		<id name="id" column="user_id">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="numPaperMath" type="string"></property>
+		<property name="othersMath" type="string"></property>
+		<property name="numPaperEnglish" type="string"></property>
+		<property name="numWordEnglish" type="string"></property>
+		<property name="othersEnglish" type="string"></property>
+		<property name="numPaperMajor" type="string"></property>
+		<property name="othersMajor" type="string"></property>
+		<property name="numPaperPolitics" type="string"></property>
+		<property name="numChoicePolitics" type="string"></property>
+		<property name="othersPolitics" type="string"></property>
+	</class>
+</hibernate-mapping>

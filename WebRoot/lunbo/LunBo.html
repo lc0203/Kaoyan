@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        #box{position: relative;width:600px;height:400px;margin:0 auto;}
+        li{list-style:none;}
+        #image{width:600px;height: 380px;position: relative;}
+        #image li{position: absolute;top:0;left:0;display: none;}
+        #image li.image_show{display: block;}
+        #list {position: absolute;bottom: 6px;left: 50%;margin-left: -36px;}
+        #list li{ width: 12px;vertical-align: middle;height: 12px;float: left;border-radius: 6px;margin-right: 6px;background-color:#ccc;}
+        #list li.list_show{background:red;}
+        .round li{width: 40px; height: 40px; background-color: #cccccc;border-radius: 20px;line-height: 40px;color: white;font-size: 28px;font-weight: bold;text-align: center;}
+        .round li:hover{background-color: #666;cursor: pointer;}
+        .round_l{float: left;margin-left: 5px;}
+        .round_r{float:right;margin-right: 5px;}
+        .round{width: 600px;position: absolute;top:50%;margin-top: -20px;display: none;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="image">
+            <li class="image_show"><a href="http://www.kaoyan.com/z2017/zhengshibaoming/" target="_blank"><img src="1.png"  width="600px" height="380px"/></a></li>
+            <li><a href="http://www.kaoyan.com/z2017/jianzhang/" target="_blank"><img src="2.png"  width="600px" height="380px"/><a href="" target="_blank"></a></li>
+            <li><a href="https://detail.tmall.com/item.htm?id=556205006364&ali_trackid=2:mm_53787507_15604027_59712458:1508167397_2k8_1491990064&pvid=10_106.38.120.250_546_1505196206742" target="_blank"><img src="3.png"  width="600px" height="380px"/></a></li>
+            <li><a href="http://www.kaoyan.com/z2017/zjjd/?pc" target="_blank"><img src="4.png"   width="600px" height="380px"/></a></li>
+        </ul>
+        <ul id="list">
+            <li class="list_show"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="round" id="round">
+            <li class="round_l" id="round_l">&lt;</li>
+            <li  class="round_r" id="round_r">&gt;</li>
+        </ul>
+    </div>
+<script type="text/javascript">
+    /*����������ӣ��������ߵ�Բ����ʾЧ��*/
+    function $(id){return document.getElementById(id);}
+    $("box").onmouseover=function () {
+        $("round").style.display="block";
+    }
+    $("box").onmouseout=function () {
+        $("round").style.display="none";
+    }
+    var image = $("image").getElementsByTagName("li");
+    var list =$("list").getElementsByTagName("li");
+    var round_r = $("round_r");
+    var round_l = $("round_l");
+    for (var i = 0; i < list.length; i++) {
+        list[i].index = i;
+        /*��������ͼƬ�·�СԲ����ʱͼƬ�Զ��л�*/
+        list[i].onmouseover = function(){
+            for(var j = 0;j<list.length;j++){
+                list[j].className="";
+                image[j].className="";
+            }
+            this.className="list_show";
+            image[this.index].className="image_show";
+        }
+    }
+    round_r.onclick = function(){
+        move(false);
+    }
+    round_l.onclick = function(){
+        move(true);
+    }
+    function move(boolean){
+        for(var i = 0;i<list.length;i++){
+            if(list[i].className=="list_show"){
+                var index = i;
+                break;
+            }
+        }
+        boolean ?(index == 0? index= list.length-1:index--):(index == list.length-1? index= 0:index++);
+        for(var j = 0;j<list.length;j++){
+            list[j].className="";
+            image[j].className="";
+        }
+        list[index].className="list_show";
+        image[index].className="image_show";
+    }
+</script>
+</body>
+</html>

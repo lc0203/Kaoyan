@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.enity">
+	
+	<class name="StudyPlan" table="t_plan">
+		<id name="pid">
+			<generator class="native"></generator>
+		</id>	
+		<!-- <property name="u_id"></property> -->
+		<property name="s_id"></property>
+		
+		<!--  <composite-id name="keys">
+		 <key-property name="u_id" column="u_id" type="int"></key-property>
+		 <key-property name="s_id" column="s_id" type="int"></key-property>
+		 </composite-id> -->
+		 <many-to-one name="u_id" column="u_id" class="Student"></many-to-one>
+	</class>
+</hibernate-mapping>
