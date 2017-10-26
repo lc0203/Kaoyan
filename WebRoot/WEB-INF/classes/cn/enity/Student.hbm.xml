@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.enity">
+	
+	<class name="Student" table="t_user">
+		<id name="uid">
+			<generator class="assigned"></generator>
+		</id>	
+		
+		<property name="uname" column="uname" length="255"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="major" column="major" type="string"></property>
+		
+		<!-- <property name="stype" column="stype"></property>
+		<property name="path" ></property>
+		 -->
+		 <!-- <set name="emps">
+		 	 <key column="dept_id"></key>
+		 	 <one-to-many class="Employee"/>
+		 </set> -->
+		 <set name="StudyPlan" table="t_plan" cascade="save-update" lazy="false">
+		 <key column="u_id"></key>
+		 <one-to-many class="StudyPlan"/>
+		 </set>
+	</class>
+	
+</hibernate-mapping>

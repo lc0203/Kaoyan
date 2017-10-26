@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibenate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<class name="Plan.Schedule" table="schedule">
+		<id name="id" column="user_id" type="string">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="finished" type="integer"></property>
+		<property name="workdays" type="integer"></property>
+	</class>
+</hibernate-mapping>
